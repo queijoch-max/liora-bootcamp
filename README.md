@@ -16,12 +16,7 @@ Sprint	Thème	Contenu
 7	DevOps	Déploiement front et back, tests avec Jest, CI/CD avec GitHub
 8	Gestion de projet	Méthode Agile, product management, coûts d'un projet data
 
-Structure du dépôt
 
-liora-bootcamp/
-├── TP-Javascript/     # Sprint 1 — exercices et TP JavaScript
-|    └──TP1
-└── README.md
 
 Les dossiers des prochains TP seront ajoutés au fil du bootcamp.
 
