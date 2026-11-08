@@ -1,0 +1,103 @@
+%%html
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À Propos de Nous</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Prend au minimum 100% de la hauteur de l'écran visible */
+      }
+
+      header {
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 colonnes de même taille */
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      footer {
+        background: #1a252f;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: auto; 
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>À Propos de Nous</header>
+
+    <section class="container">
+      <h2>Qui sommes-nous ?</h2>
+      <p>
+        Nous sommes une équipe passionnée par la création d'expériences
+        numériques élégantes et efficaces. Notre mission est de concevoir des
+        interfaces épurées et fonctionnelles qui apportent une réelle valeur
+        ajoutée.
+      </p>
+      
+      <div class="gallery">
+        <img src="https://picsum.photos/300/200?random=1" alt="Image de galerie 1" />
+        <img src="https://picsum.photos/300/200?random=2" alt="Image de galerie 2" />
+        <img src="https://picsum.photos/300/200?random=3" alt="Image de galerie 3" />
+        <img src="https://picsum.photos/300/200?random=4" alt="Image de galerie 4" />
+        <img src="https://picsum.photos/300/200?random=5" alt="Image de galerie 5" />
+        <img src="https://picsum.photos/300/200?random=6" alt="Image de galerie 6" />
+        <img src="https://picsum.photos/300/200?random=7" alt="Image de galerie 7" />
+        <img src="https://picsum.photos/300/200?random=8" alt="Image de galerie 8" />
+      </div>
+    </section>
+
+    <footer>&copy; 2024 - Tous droits réservés</footer>
+  </body>
+</html>

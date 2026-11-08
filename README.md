@@ -19,6 +19,14 @@ Chaque TP est rangé dans son propre dossier et fonctionne de manière indépend
 
 ## TP réalisés
 
+### Sprint 1 — CSS
+
+| TP | Description | Technologies |
+|---|---|---|
+| [TP1 — À propos de nous](TP-CSS) | Page « À propos de nous » : en-tête, présentation de l'équipe, galerie de 8 images en grille et footer placé en bas de l'écran. | HTML, CSS (flexbox, grid) |
+
+Le fichier `tp1-css.html` est prévu pour un notebook Jupyter : il commence par `%%html` et se colle dans une cellule de code.
+
 ### Sprint 1 — JavaScript
 
 | TP | Description | Technologies |
