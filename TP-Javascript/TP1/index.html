@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquette</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#utilisateurs">Utilisateurs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="accueil" class="accueil">
+            <div>
+                <h1 class="bienvenu-titre">Bienvenue sur notre site</h1>
+                <p class="bienvenu-text">Découvrez des profils d'utilisateurs générés aléatoirement.</p>
+            </div>
+            <button type="button" class="button-bvn" id="button-bvn">En savoir plus</button>
+        </section>
+
+        <section id="utilisateurs" class="utilisateurs">
+            <h2 class="utilisateurs-titre">Galerie d'utilisateurs</h2>
+            <form>
+                <button type="button" class="button-users" id="btn-users">Afficher les utilisateurs</button>
+            </form>
+            <div id="users-gallery" class="users-gallery">
+                <!-- Les utilisateurs seront affichés ici -->
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="contact-titre">Contactez-nous</h2>
+            <button type="button" class="button-contact" id="btn-contact">Envoyer un message</button>
+        </section>
+    </main>
+    <footer>
+        <p class="footer">© 2024 Mon Site Web</p>
+    </footer>
+</body>
+</html>
