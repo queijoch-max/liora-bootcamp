@@ -80,6 +80,7 @@ nav a {
     gap: 20px;
     padding-top: 100px;
     padding-left: 50px;
+    padding-right: 50px;
 }
 
 .utilisateurs-titre {
@@ -99,16 +100,40 @@ nav a {
 }
 
 .users-gallery {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.user-card {
     background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
-    width: 207px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 0;
     height: 193px;
-    top: 159px;
-    border-width: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 20px;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.user-card img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.user-card p {
+    color: #333333;
+    font-size: 14px;
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .contact {
@@ -119,7 +144,6 @@ nav a {
     text-align: center;
     gap: 20px;
     padding-top: 60px;
-    padding-left: 50px;
 }
 
 .contact-titre {
