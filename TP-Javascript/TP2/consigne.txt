@@ -1,0 +1,13 @@
+Exercice pratique Pokemon
+
+L'objectif de ce notebook est de vous faire pratiquer les langages HTML, CSS et JS. 
+Pour ce faire vous pourrez vous rendre sur la maquette Figma. 
+L'interface à développer comporte 1 header, 2 sections, 1 footer :
+
+    header composé d'un texte
+    une section comprenant un bouton permettant de generer 6 pokemons de manière aléatoire. Les pokemons chargés doivent être affichés dans l'ordre des poids(du plus leger au plus lourd).
+    une section comprenant un bouton permettant de charger et d'afficher un pokemon en fonction de son nom.
+    Un footer
+
+    Pour ce faire, nous ferons appel à l'API PokeAPI. Voici la documentation.
+

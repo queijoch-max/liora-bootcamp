@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #FFCB05;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #3B4CCA;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.pokemons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pokemon-gallery {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 925px; /* 5 cartes de 161px + 4 espaces de 30px = 5 cartes par ligne */
+}
+
+.pokemon-card {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 2px 10px 0px #0000001A;
+    width: 161px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.pokemon-name {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.btn-charge {
+    background-color: #3B4CCA;
+    width: 173px;
+    height: 35.5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pokemon-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.h2-title {
+    color: #333333;
+    font-weight: 700;
+    font-size: 24px;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.input-search {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    width: 161px;
+    height: 37.5px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.btn-search {
+    background-color: #3B4CCA;
+    width: 109px;
+    height: 35.5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.card-pokemon {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 2px 10px 0px #0000001A;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #3B4CCA;
+    color: #FFFFFF;
+    height: 70.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.footer {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+}

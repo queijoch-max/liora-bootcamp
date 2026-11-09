@@ -32,8 +32,9 @@ Le fichier `tp1-css.html` est prévu pour un notebook Jupyter : il commence par 
 | TP | Description | Technologies |
 |---|---|---|
 | [TP1 — Random User](TP-Javascript/TP1) | Intégration d'une maquette Figma (menu, section d'accueil, galerie, contact, footer). Au clic sur un bouton, 6 fiches utilisateur sont générées grâce à l'API [Random User](https://randomuser.me). | HTML, CSS (flexbox), JavaScript (DOM, `fetch`, `async`/`await`) |
+| [TP2 — Pokémon Explorer](TP-Javascript/TP2) | Au clic sur un bouton, 6 Pokémon tirés au hasard sont affichés, triés du plus léger au plus lourd. Une seconde section permet de rechercher un Pokémon par son nom anglais ou son numéro, avec un message si le Pokémon est introuvable. Données issues de l'API [PokeAPI](https://pokeapi.co). | HTML, CSS (flexbox, `flex-wrap`), JavaScript (`fetch`, `Promise.all`, `Math.random`, `sort`, gestion d'erreur) |
 
-Le fichier `tp1-random-user.html` regroupe le HTML, le CSS et le JavaScript du TP1 en un seul fichier, pour l'intégrer dans un notebook Jupyter.
+Pour chaque TP JavaScript, un fichier unique (`tp1-random-user.html`, `tp2-api-pokemon.html`) regroupe le HTML, le CSS et le JavaScript, pour l'intégrer dans un notebook Jupyter.
 
 Les dossiers des prochains TP seront ajoutés au fil du bootcamp.
 
