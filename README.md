@@ -33,8 +33,11 @@ Le fichier `tp1-css.html` est prévu pour un notebook Jupyter : il commence par 
 |---|---|---|
 | [TP1 — Random User](TP-Javascript/TP1) | Intégration d'une maquette Figma (menu, section d'accueil, galerie, contact, footer). Au clic sur un bouton, 6 fiches utilisateur sont générées grâce à l'API [Random User](https://randomuser.me). | HTML, CSS (flexbox), JavaScript (DOM, `fetch`, `async`/`await`) |
 | [TP2 — Pokémon Explorer](TP-Javascript/TP2) | Au clic sur un bouton, 6 Pokémon tirés au hasard sont affichés, triés du plus léger au plus lourd. Une seconde section permet de rechercher un Pokémon par son nom anglais ou son numéro, avec un message si le Pokémon est introuvable. Données issues de l'API [PokeAPI](https://pokeapi.co). | HTML, CSS (flexbox, `flex-wrap`), JavaScript (`fetch`, `Promise.all`, `Math.random`, `sort`, gestion d'erreur) |
+| [TP3 — NASA Explorer](TP-Javascript/TP3) | Affichage de l'image astronomique du jour de la NASA (titre, image, description) et recherche d'une image par date, avec gestion des vidéos et des erreurs (date manquante, date sans image, API en erreur, connexion impossible). Données issues de l'API APOD de [NASA Science](https://science.nasa.gov). | HTML, CSS (flexbox), JavaScript (`fetch`, `try`/`catch`, `response.ok`, manipulation de dates) |
 
-Pour chaque TP JavaScript, un fichier unique (`tp1-random-user.html`, `tp2-api-pokemon.html`) regroupe le HTML, le CSS et le JavaScript, pour l'intégrer dans un notebook Jupyter.
+> **Note sur le TP3 :** la consigne prévoyait l'API `api.nasa.gov/planetary/apod` avec la clé `DEMO_KEY`. Depuis le transfert des images APOD vers le site NASA Science, cette API renvoie des données erronées (logo NASA et titre générique à la place de l'image). Le TP utilise donc l'API `science.nasa.gov/wp-json/wp/v2/apod-basic`, qui fonctionne sans clé.
+
+Pour chaque TP JavaScript, un fichier unique (`tp1-random-user.html`, `tp2-api-pokemon.html`, `tp3-api-nasa.html`) regroupe le HTML, le CSS et le JavaScript, pour l'intégrer dans un notebook Jupyter.
 
 Les dossiers des prochains TP seront ajoutés au fil du bootcamp.
 

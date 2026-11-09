@@ -1,0 +1,34 @@
+Exercice pratique NASA
+
+Dans cet exercice, vous allez créer une application web qui affiche des images de l'espace en utilisant l'API gratuite de la NASA. 
+Vous devrez explorer la documentation de l'API pour comprendre comment récupérer et afficher les bonnes données. 
+Utilisation de plaquette Figma
+
+Ce que vous devez faire
+1️⃣ Interface utilisateur
+
+Créez une page web contenant :
+
+    Un header avec le titre de l’application.
+    Une section affichant l’image du jour de la NASA avec son titre et sa description.
+    Une section de recherche permettant de rechercher une image astronomique par date.
+    Un footer.
+
+2️⃣ Recherche de l'API dans la documentation
+
+Vous devez chercher dans la documentation officielle de la NASA pour trouver les bons endpoints.
+Accédez à la documentation ici
+
+Votre mission :
+
+    Trouver comment récupérer l’image du jour.
+    Trouver comment récupérer une image en fonction d’une date.
+    Comprendre comment formater la requête et utiliser les bons paramètres.
+
+3️⃣ Contraintes techniques
+
+    Utilisez DEMO_KEY comme clé API (ne mettez pas de clé personnelle). 
+    Avec cette clé, vous pourrez effectuer 30 appels API par heure et 50 par jour.
+    Implémentez au moins une fonction pour organiser le code.
+    Gérez les erreurs d’API (ex. date invalide, requête échouée, quota dépassé).
+    Assurez-vous que l’application est fonctionnelle et affiche correctement les images.

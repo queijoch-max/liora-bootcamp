@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #0A192F;
+    color: #FFF;
+}
+
+
+header {
+    background: linear-gradient(93deg, #1F4068 0%, #1B1B2F 100%);
+    height: 72px;
+    box-shadow: 0px 4px 10px 0px #00000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #E43F5A;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.img-day,
+.search-img {
+    background-color: #1F2B47; /* couleur estimée : à vérifier dans Figma */
+    box-shadow: 0px 4px 10px 0px #00000080;
+    border-radius: 10px;
+    max-width: 860px;
+    margin: 60px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.h2-title {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.nasa-title {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nasa-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.nasa-image-description {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 506px;
+}
+
+.input {
+    flex: 1;
+    height: 47px;
+    border-radius: 5px;
+    border: 1px solid #E43F5A;
+    padding: 0 10px;
+}
+
+.btn-search {
+    background-color: #E43F5A;
+    color: #FFF;
+    width: 106px;
+    height: 42.5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #1B1B2F;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    font-weight: 400;
+    font-size: 14px;
+}

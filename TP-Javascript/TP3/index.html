@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA TP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">EXPLORER L'ESPACE AVEC LA NASA</h1>
+    </header>
+    <main>
+        <section class="img-day">
+            <h2 class="h2-title">Image du jour</h2>
+            <div class="img-container">
+                <h3 class="nasa-title" id="day-title"></h3>
+                <img class="nasa-image" id="day-image" src="" alt="Image du jour de la NASA">
+                <p class="nasa-image-description" id="day-description"></p>
+            </div>
+        </section>
+
+        <section class="search-img">
+            <h2 class="h2-title">Rechercher une image par date</h2>
+            <div class="search-bar">
+                <input class="input" type="date" id="search-input">
+                <button type="button" class="btn-search" id="btn-search">Rechercher</button>
+            </div>
+            <div class="img-container" id="search-results">
+                <h3 class="nasa-title" id="search-title"></h3>
+                <img class="nasa-image" id="search-image" src="" alt="Image de la NASA à la date choisie">
+                <p class="nasa-image-description" id="search-description"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-text">© 2024 - NASA Explorer</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA TP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Poppins, sans-serif;
+            background-color: #0A192F;
+            color: #FFF;
+        }
+        
+        
+        header {
+            background: linear-gradient(93deg, #1F4068 0%, #1B1B2F 100%);
+            height: 72px;
+            box-shadow: 0px 4px 10px 0px #00000080;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .title {
+            color: #E43F5A;
+            font-weight: 700;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        
+        .img-day,
+        .search-img {
+            background-color: #1F2B47; /* couleur estimée : à vérifier dans Figma */
+            box-shadow: 0px 4px 10px 0px #00000080;
+            border-radius: 10px;
+            max-width: 860px;
+            margin: 60px auto;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .h2-title {
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        
+        .img-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nasa-title {
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .nasa-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .nasa-image-description {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 506px;
+        }
+        
+        .input {
+            flex: 1;
+            height: 47px;
+            border-radius: 5px;
+            border: 1px solid #E43F5A;
+            padding: 0 10px;
+        }
+        
+        .btn-search {
+            background-color: #E43F5A;
+            color: #FFF;
+            width: 106px;
+            height: 42.5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        
+        footer {
+            background-color: #1B1B2F;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .footer-text {
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">EXPLORER L'ESPACE AVEC LA NASA</h1>
+    </header>
+    <main>
+        <section class="img-day">
+            <h2 class="h2-title">Image du jour</h2>
+            <div class="img-container">
+                <h3 class="nasa-title" id="day-title"></h3>
+                <img class="nasa-image" id="day-image" src="" alt="Image du jour de la NASA">
+                <p class="nasa-image-description" id="day-description"></p>
+            </div>
+        </section>
+
+        <section class="search-img">
+            <h2 class="h2-title">Rechercher une image par date</h2>
+            <div class="search-bar">
+                <input class="input" type="date" id="search-input">
+                <button type="button" class="btn-search" id="btn-search">Rechercher</button>
+            </div>
+            <div class="img-container" id="search-results">
+                <h3 class="nasa-title" id="search-title"></h3>
+                <img class="nasa-image" id="search-image" src="" alt="Image de la NASA à la date choisie">
+                <p class="nasa-image-description" id="search-description"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-text">© 2024 - NASA Explorer</p>
+    </footer>
+    <script>
+        // ===== 1. LES ÉLÉMENTS DU HTML =====
+        
+        // Image du jour
+        const titleImageDay = document.getElementById("day-title");
+        const imageDay = document.getElementById("day-image");
+        const descriptionImageDay = document.getElementById("day-description");
+        
+        // Recherche par date
+        const searchInput = document.getElementById("search-input");
+        const buttonSearch = document.getElementById("btn-search");
+        const searchTitle = document.getElementById("search-title");
+        const searchImage = document.getElementById("search-image");
+        const searchDescription = document.getElementById("search-description");
+        
+        // Adresse de l'API APOD (Astronomy Picture of the Day) de la NASA
+        const API_URL = "https://science.nasa.gov/wp-json/wp/v2/apod-basic";
+        
+        
+        // ===== 2. AFFICHER UN MESSAGE D'ERREUR =====
+        
+        // Une seule fonction pour toutes les erreurs : on vide le titre,
+        // on cache l'image et on écrit le message à la place de la description
+        function showError(titleElement, imageElement, descriptionElement, message) {
+            titleElement.textContent = "";
+            imageElement.style.display = "none";
+            descriptionElement.textContent = message;
+        }
+        
+        
+        // ===== 3. IMAGE DU JOUR =====
+        
+        async function getImageDay() {
+            try {
+                // Sans date, l'API renvoie la liste des dernières images
+                const response = await fetch(API_URL);
+        
+                // Erreur 1 : l'API répond, mais avec une erreur (serveur en panne, trop d'appels…)
+                if (!response.ok) {
+                    showError(titleImageDay, imageDay, descriptionImageDay,
+                        `La NASA ne répond pas correctement (erreur ${response.status}). Réessayez plus tard.`);
+                    return;
+                }
+        
+                const list = await response.json();
+        
+                // Erreur 2 : la liste est vide
+                if (list.length === 0) {
+                    showError(titleImageDay, imageDay, descriptionImageDay,
+                        "Aucune image du jour disponible pour le moment.");
+                    return;
+                }
+        
+                // La 1re de la liste (index 0) est l'image du jour
+                const data = list[0];
+        
+                // On remplit le titre et la description
+                // (la description contient du HTML : on enlève "Explanation:" et on utilise innerHTML)
+                titleImageDay.textContent = data.title;
+                descriptionImageDay.innerHTML = data.explanation.replace("<strong>Explanation:</strong>", "");
+        
+                // Image ou vidéo ?
+                if (data.media_type === "image") {
+                    imageDay.src = data.hdurl;
+                    imageDay.style.display = "block";
+                } else {
+                    imageDay.style.display = "none";
+                    descriptionImageDay.textContent = `Aujourd'hui, c'est une vidéo : ${data.url}`;
+                }
+            } catch (error) {
+                // Erreur 3 : la requête a échoué (pas d'Internet, API injoignable…)
+                showError(titleImageDay, imageDay, descriptionImageDay,
+                    "Impossible de contacter la NASA. Vérifiez votre connexion Internet.");
+            }
+        }
+        
+        
+        // ===== 4. RECHERCHE PAR DATE =====
+        
+        async function getSearchImage() {
+            // date = ce que l'utilisateur a choisi, au format "2025-01-14"
+            const date = searchInput.value;
+        
+            // Erreur 1 : aucune date choisie
+            if (date === "") {
+                showError(searchTitle, searchImage, searchDescription,
+                    "Veuillez choisir une date.");
+                return;
+            }
+        
+            try {
+                // L'API attend le format "250114" (AAMMJJ) :
+                // on enlève les 2 premiers chiffres de l'année, puis les tirets
+                const apiDate = date.slice(2).replaceAll("-", "");
+        
+                // On demande les images entre cette date… et cette même date
+                const response = await fetch(`${API_URL}?date_from=${apiDate}&date_to=${apiDate}`);
+        
+                // Erreur 2 : l'API répond, mais avec une erreur
+                if (!response.ok) {
+                    showError(searchTitle, searchImage, searchDescription,
+                        `La NASA ne répond pas correctement (erreur ${response.status}). Réessayez plus tard.`);
+                    return;
+                }
+        
+                const list = await response.json();
+        
+                // Erreur 3 : aucune image pour cette date (avant le 16 juin 1995 ou dans le futur)
+                if (list.length === 0) {
+                    showError(searchTitle, searchImage, searchDescription,
+                        "Aucune image pour cette date. Les images existent du 16 juin 1995 à aujourd'hui.");
+                    return;
+                }
+        
+                // La réponse est une liste : on prend le 1er élément
+                const data = list[0];
+        
+                // On remplit le titre et la description
+                searchTitle.textContent = data.title;
+                searchDescription.innerHTML = data.explanation.replace("<strong>Explanation:</strong>", "");
+        
+                // Image ou vidéo ?
+                if (data.media_type === "image") {
+                    searchImage.src = data.hdurl;
+                    searchImage.style.display = "block";
+                } else {
+                    searchImage.style.display = "none";
+                    searchDescription.textContent = `Ce jour-là, c'est une vidéo : ${data.url}`;
+                }
+            } catch (error) {
+                // Erreur 4 : la requête a échoué (pas d'Internet, API injoignable…)
+                showError(searchTitle, searchImage, searchDescription,
+                    "Impossible de contacter la NASA. Vérifiez votre connexion Internet.");
+            }
+        }
+        
+        
+        // ===== 5. LANCEMENT =====
+        
+        // L'image du jour s'affiche dès l'ouverture de la page
+        getImageDay();
+        
+        // La recherche se lance au clic sur le bouton
+        buttonSearch.addEventListener("click", () => {
+            getSearchImage();
+        });
+
+    </script>
+</body>
+</html>
