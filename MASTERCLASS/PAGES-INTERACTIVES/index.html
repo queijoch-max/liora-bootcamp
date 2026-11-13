@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entreprises Info</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="title" id="title">Entreprises Info</h1>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#Recherche">Recherche</a>
+            <a href="#A propos">A propos</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="search-section" id="Recherche">
+            <h2 class="search-title" id="search-title">Rechercher une entreprise par SIREN</h2>
+            <form class="search-form" id="search-form">
+                <div class="search-box">
+                    <input type="search" class="search-input" id="search-input" placeholder="Entrez le SIREN ou le nom ici" autocomplete="off">
+                    <ul id="search-results" class="search-results">
+                        <!-- Liste des entreprises affichée ici par le JavaScript -->
+                    </ul>
+                </div>
+                <button type="submit" class="btn-search" id="btn-search">Rechercher</button>
+            </form>
+
+            <div class="company-details" id="company-details">
+                <!-- Fiche de l'entreprise choisie affichée ici -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>

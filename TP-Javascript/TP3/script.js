@@ -8,7 +8,6 @@ const buttonSearch = document.getElementById("btn-search");
 const searchTitle = document.getElementById("search-title");
 const searchImage = document.getElementById("search-image");
 const searchDescription = document.getElementById("search-description");
-
 const API_URL = "https://science.nasa.gov/wp-json/wp/v2/apod-basic";
 
 
