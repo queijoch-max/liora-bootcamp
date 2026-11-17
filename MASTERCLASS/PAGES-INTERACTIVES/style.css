@@ -40,9 +40,6 @@ a {
     text-decoration: none;
 }
 
-
-/* ===== SECTION RECHERCHE (le cadre centré) ===== */
-
 .search-section {
     background-color: #FFFFFF;
     max-width: 600px;
@@ -69,7 +66,6 @@ a {
     width: 100%;
 }
 
-/* Le conteneur de l'input sert de repère pour la liste déroulante */
 .search-box {
     position: relative;
     flex: 1;
@@ -104,8 +100,6 @@ a {
     background-color: #43A047;
 }
 
-/* ===== LISTE DES SUGGESTIONS ===== */
-
 .search-results {
     list-style: none;
     position: absolute;
@@ -121,7 +115,6 @@ a {
     z-index: 10;
 }
 
-/* Cachée tant qu'elle est vide */
 .search-results:empty {
     display: none;
 }
@@ -149,8 +142,6 @@ a {
     font-size: 13px;
     color: #777777;
 }
-
-/* ===== FICHE ENTREPRISE ===== */
 
 .company-details {
     width: 100%;

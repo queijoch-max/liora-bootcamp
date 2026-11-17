@@ -99,7 +99,7 @@ searchInput.addEventListener("input", () => {
 });
 
 searchForm.addEventListener("submit", async (event) => {
-    event.preventDefault();   // empêche le formulaire de recharger la page
+    event.preventDefault(); 
 
     await runSearch();
     if (companies.length > 0) {
