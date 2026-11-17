@@ -17,13 +17,13 @@ Chaque TP est rangé dans son propre dossier et fonctionne de manière indépend
 | 7 | DevOps | Déploiement front et back, tests avec Jest, CI/CD avec GitHub |
 | 8 | Gestion de projet | Méthode Agile, product management, coûts d'un projet data |
 
-## TP réalisés
+## TP et exercices réalisés
 
 ### Sprint 1 — CSS
 
 | TP | Description | Technologies |
 |---|---|---|
-| [TP1 — À propos de nous](TP-CSS) | Page « À propos de nous » : en-tête, présentation de l'équipe, galerie de 8 images en grille et footer placé en bas de l'écran. | HTML, CSS (flexbox, grid) |
+| [TP1 — À propos de nous](TP-CSS) | Page « À propos de nous » : en-tête, présentation de l'équipe, galerie de 8 images en grille et footer placé en bas de l'écran. | HTML, CSS |
 
 Le fichier `tp1-css.html` est prévu pour un notebook Jupyter : il commence par `%%html` et se colle dans une cellule de code.
 
@@ -31,9 +31,9 @@ Le fichier `tp1-css.html` est prévu pour un notebook Jupyter : il commence par 
 
 | TP | Description | Technologies |
 |---|---|---|
-| [TP1 — Random User](TP-Javascript/TP1) | Intégration d'une maquette Figma (menu, section d'accueil, galerie, contact, footer). Au clic sur un bouton, 6 fiches utilisateur sont générées grâce à l'API [Random User](https://randomuser.me). | HTML, CSS (flexbox), JavaScript (DOM, `fetch`, `async`/`await`) |
-| [TP2 — Pokémon Explorer](TP-Javascript/TP2) | Au clic sur un bouton, 6 Pokémon tirés au hasard sont affichés, triés du plus léger au plus lourd. Une seconde section permet de rechercher un Pokémon par son nom anglais ou son numéro, avec un message si le Pokémon est introuvable. Données issues de l'API [PokeAPI](https://pokeapi.co). | HTML, CSS (flexbox, `flex-wrap`), JavaScript (`fetch`, `Promise.all`, `Math.random`, `sort`, gestion d'erreur) |
-| [TP3 — NASA Explorer](TP-Javascript/TP3) | Affichage de l'image astronomique du jour de la NASA (titre, image, description) et recherche d'une image par date, avec gestion des vidéos et des erreurs (date manquante, date sans image, API en erreur, connexion impossible). Données issues de l'API APOD de [NASA Science](https://science.nasa.gov). | HTML, CSS (flexbox), JavaScript (`fetch`, `try`/`catch`, `response.ok`, manipulation de dates) |
+| [TP1 — Random User](TP-Javascript/TP1) | Intégration d'une maquette Figma (menu, section d'accueil, galerie, contact, footer). Au clic sur un bouton, 6 fiches utilisateur sont générées grâce à l'API [Random User](https://randomuser.me). | HTML, CSS, JavaScript |
+| [TP2 — Pokémon Explorer](TP-Javascript/TP2) | Au clic sur un bouton, 6 Pokémon tirés au hasard sont affichés, triés du plus léger au plus lourd. Une seconde section permet de rechercher un Pokémon par son nom anglais ou son numéro, avec un message si le Pokémon est introuvable. Données issues de l'API [PokeAPI](https://pokeapi.co). | HTML, CSS, JavaScript |
+| [TP3 — NASA Explorer](TP-Javascript/TP3) | Affichage de l'image astronomique du jour de la NASA (titre, image, description) et recherche d'une image par date, avec gestion des vidéos et des erreurs (date manquante, date sans image, API en erreur, connexion impossible). Données issues de l'API APOD de [NASA Science](https://science.nasa.gov). | HTML, CSS, JavaScript |
 
 > **Note sur le TP3 :** la consigne prévoyait l'API `api.nasa.gov/planetary/apod` avec la clé `DEMO_KEY`. Depuis le transfert des images APOD vers le site NASA Science, cette API renvoie des données erronées (logo NASA et titre générique à la place de l'image). Le TP utilise donc l'API `science.nasa.gov/wp-json/wp/v2/apod-basic`, qui fonctionne sans clé.
 
@@ -43,13 +43,21 @@ Pour chaque TP JavaScript, un fichier unique (`tp1-random-user.html`, `tp2-api-p
 
 | Projet | Description | Technologies |
 |---|---|---|
-| [Pages interactives — Entreprises Info](MASTERCLASS/PAGES-INTERACTIVES) | Recherche d'entreprises françaises par SIREN ou par nom. Les suggestions s'affichent dans une liste pendant la saisie, et un clic sur une entreprise affiche sa fiche (SIREN, forme juridique, activité, date de création, adresse du siège, statut). Données issues de l'API de suggestions [Pappers](https://www.pappers.fr), gratuite et sans clé. | HTML, CSS (flexbox, `position: absolute`, `:empty`), JavaScript (`fetch`, événement `input`, `setTimeout`, `createElement`, `textContent`) |
+| [Pages interactives — Entreprises Info](MASTERCLASS/PAGES-INTERACTIVES) | Recherche d'entreprises françaises par SIREN ou par nom. Les suggestions s'affichent dans une liste pendant la saisie, et un clic sur une entreprise affiche sa fiche (SIREN, forme juridique, activité, date de création, adresse du siège, statut). Données issues de l'API de suggestions [Pappers](https://www.pappers.fr), gratuite et sans clé. | HTML, CSS, JavaScript |
 
-Les dossiers des prochains TP seront ajoutés au fil du bootcamp.
+### Sprint 2 — Exercices React
+
+Les exercices sont rangés dans le dossier [EXERCICES](EXERCICES). Ce sont des mises en pratique du cours.
+
+| Exercice | Description | Technologies |
+|---|---|---|
+| [Refuge des Patounes](EXERCICES/Ex-Sprint2/my-app) | Page d'un refuge pour chats : barre de navigation, section de présentation et section « La Star du Jour » avec la photo et la description d'un chat à adopter. | React, Vite, Javascript, CSS |
+
+Les dossiers des prochains TP et exercices seront ajoutés au fil du bootcamp.
 
 ## Lancer un TP
 
-Chaque TP se lance depuis son propre dossier.
+Chaque TP ou exercice se lance depuis son propre dossier.
 
 **TP en HTML / CSS / JavaScript** : ouvrir le fichier `index.html` du TP avec l'extension **Live Server** de VS Code (clic droit, puis « Open with Live Server »).
 
@@ -60,7 +68,5 @@ cd nom-du-tp
 npm install      # la première fois seulement
 npm run dev
 ```
-
-## Autrice
 
 Charlotte Queijo

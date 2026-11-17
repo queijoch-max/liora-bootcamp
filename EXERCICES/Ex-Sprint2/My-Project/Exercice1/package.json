@@ -1,0 +1,18 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "My first Node.js project",
+  "license": "ISC",
+  "author": "CharlotteQ",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\""
+  },
+  "dependencies": {
+    "mathjs": "^15.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
