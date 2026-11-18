@@ -44,6 +44,7 @@ Pour chaque TP JavaScript, un fichier unique (`tp1-random-user.html`, `tp2-api-p
 | Projet | Description | Technologies |
 |---|---|---|
 | [Pages interactives — Entreprises Info](MASTERCLASS/PAGES-INTERACTIVES) | Recherche d'entreprises françaises par SIREN ou par nom. Les suggestions s'affichent dans une liste pendant la saisie, et un clic sur une entreprise affiche sa fiche (SIREN, forme juridique, activité, date de création, adresse du siège, statut). Données issues de l'API de suggestions [Pappers](https://www.pappers.fr), gratuite et sans clé. | HTML, CSS, JavaScript |
+| [Démo React](MASTERCLASS/DEMOS/react-app) | Premier projet React créé avec Vite : une page découpée en **composants** réutilisables (`Navbar`, `Hello`, `Footer`). Le composant `Hello` reçoit un prénom et un âge en **props** et s'affiche plusieurs fois avec des valeurs différentes. | React, Vite, JSX |
 
 ### Sprint 2 — Exercices React
 
