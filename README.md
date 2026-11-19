@@ -19,42 +19,36 @@ Chaque TP est rangé dans son propre dossier et fonctionne de manière indépend
 
 ## TP et exercices réalisés
 
-### Sprint 1 — CSS
+### TP
 
-| TP | Description | Technologies |
-|---|---|---|
-| [TP1 — À propos de nous](TP-CSS) | Page « À propos de nous » : en-tête, présentation de l'équipe, galerie de 8 images en grille et footer placé en bas de l'écran. | HTML, CSS |
+| Sprint | TP | Description | Technologies |
+|:---:|---|---|---|
+| 1 | [TP CSS — À propos de nous](TP-CSS) | Page « À propos de nous » : en-tête, présentation de l'équipe, galerie de 8 images en grille et footer placé en bas de l'écran. | HTML, CSS |
+| 1 | [TP1 JS — Random User](TP-Javascript/TP1) | Intégration d'une maquette Figma (menu, section d'accueil, galerie, contact, footer). Au clic sur un bouton, 6 fiches utilisateur sont générées grâce à l'API [Random User](https://randomuser.me). | HTML, CSS, JavaScript |
+| 1 | [TP2 JS — Pokémon Explorer](TP-Javascript/TP2) | Au clic sur un bouton, 6 Pokémon tirés au hasard sont affichés, triés du plus léger au plus lourd. Une seconde section permet de rechercher un Pokémon par son nom anglais ou son numéro, avec un message si le Pokémon est introuvable. Données issues de l'API [PokeAPI](https://pokeapi.co). | HTML, CSS, JavaScript |
+| 1 | [TP3 JS — NASA Explorer](TP-Javascript/TP3) | Affichage de l'image astronomique du jour de la NASA (titre, image, description) et recherche d'une image par date, avec gestion des vidéos et des erreurs (date manquante, date sans image, API en erreur, connexion impossible). Données issues de l'API APOD de [NASA Science](https://science.nasa.gov). | HTML, CSS, JavaScript |
+| 2 | [TP1 React — Landing page en composants](TP-REACT/TP1) | Intégration d'une page d'accueil découpée en **composants** React : barre de navigation avec logo et liens d'ancre (`NavBar`), section d'accueil avec un bouton d'inscription (`Accueil`), formulaire de contact (`Contact`) et pied de page (`Footer`), assemblés dans `App`. | React, Vite, JSX, CSS |
 
-Le fichier `tp1-css.html` est prévu pour un notebook Jupyter : il commence par `%%html` et se colle dans une cellule de code.
+Les TP du sprint 1 ont chacun un fichier unique (`tp1-css.html`, `tp1-random-user.html`, `tp2-api-pokemon.html`, `tp3-api-nasa.html`) qui regroupe le HTML, le CSS et le JavaScript, pour l'intégrer dans un notebook Jupyter.
 
-### Sprint 1 — JavaScript
-
-| TP | Description | Technologies |
-|---|---|---|
-| [TP1 — Random User](TP-Javascript/TP1) | Intégration d'une maquette Figma (menu, section d'accueil, galerie, contact, footer). Au clic sur un bouton, 6 fiches utilisateur sont générées grâce à l'API [Random User](https://randomuser.me). | HTML, CSS, JavaScript |
-| [TP2 — Pokémon Explorer](TP-Javascript/TP2) | Au clic sur un bouton, 6 Pokémon tirés au hasard sont affichés, triés du plus léger au plus lourd. Une seconde section permet de rechercher un Pokémon par son nom anglais ou son numéro, avec un message si le Pokémon est introuvable. Données issues de l'API [PokeAPI](https://pokeapi.co). | HTML, CSS, JavaScript |
-| [TP3 — NASA Explorer](TP-Javascript/TP3) | Affichage de l'image astronomique du jour de la NASA (titre, image, description) et recherche d'une image par date, avec gestion des vidéos et des erreurs (date manquante, date sans image, API en erreur, connexion impossible). Données issues de l'API APOD de [NASA Science](https://science.nasa.gov). | HTML, CSS, JavaScript |
-
-> **Note sur le TP3 :** la consigne prévoyait l'API `api.nasa.gov/planetary/apod` avec la clé `DEMO_KEY`. Depuis le transfert des images APOD vers le site NASA Science, cette API renvoie des données erronées (logo NASA et titre générique à la place de l'image). Le TP utilise donc l'API `science.nasa.gov/wp-json/wp/v2/apod-basic`, qui fonctionne sans clé.
-
-Pour chaque TP JavaScript, un fichier unique (`tp1-random-user.html`, `tp2-api-pokemon.html`, `tp3-api-nasa.html`) regroupe le HTML, le CSS et le JavaScript, pour l'intégrer dans un notebook Jupyter.
+> **Note sur le TP3 JS :** la consigne prévoyait l'API `api.nasa.gov/planetary/apod` avec la clé `DEMO_KEY`. Depuis le transfert des images APOD vers le site NASA Science, cette API renvoie des données erronées (logo NASA et titre générique à la place de l'image). Le TP utilise donc l'API `science.nasa.gov/wp-json/wp/v2/apod-basic`, qui fonctionne sans clé.
 
 ### Masterclass
 
-| Projet | Description | Technologies |
-|---|---|---|
-| [Pages interactives — Entreprises Info](MASTERCLASS/PAGES-INTERACTIVES) | Recherche d'entreprises françaises par SIREN ou par nom. Les suggestions s'affichent dans une liste pendant la saisie, et un clic sur une entreprise affiche sa fiche (SIREN, forme juridique, activité, date de création, adresse du siège, statut). Données issues de l'API de suggestions [Pappers](https://www.pappers.fr), gratuite et sans clé. | HTML, CSS, JavaScript |
-| [Démo React](MASTERCLASS/DEMOS/react-app) | Premier projet React créé avec Vite : une page découpée en **composants** réutilisables (`Navbar`, `Hello`, `Footer`). Le composant `Hello` reçoit un prénom et un âge en **props** et s'affiche plusieurs fois avec des valeurs différentes. | React, Vite, JSX |
+| Sprint | Projet | Description | Technologies |
+|:---:|---|---|---|
+| 1 | [Pages interactives — Entreprises Info](MASTERCLASS/PAGES-INTERACTIVES) | Recherche d'entreprises françaises par SIREN ou par nom. Les suggestions s'affichent dans une liste pendant la saisie, et un clic sur une entreprise affiche sa fiche (SIREN, forme juridique, activité, date de création, adresse du siège, statut). Données issues de l'API de suggestions [Pappers](https://www.pappers.fr), gratuite et sans clé. | HTML, CSS, JavaScript |
+| 2 | [Démo React](MASTERCLASS/DEMOS/react-app) | Premier projet React créé avec Vite : une page découpée en **composants** réutilisables (`Navbar`, `Hello`, `Footer`). Le composant `Hello` reçoit un prénom et un âge en **props** et s'affiche plusieurs fois avec des valeurs différentes. | React, Vite, JSX |
 
-### Sprint 2 — Exercices React
+### Exercices
 
 Les exercices sont rangés dans le dossier [EXERCICES](EXERCICES). Ce sont des mises en pratique du cours.
 
-| Exercice | Description | Technologies |
-|---|---|---|
-| [Refuge des Patounes](EXERCICES/Ex-Sprint2/my-app) | Page d'un refuge pour chats : barre de navigation, section de présentation et section « La Star du Jour » avec la photo et la description d'un chat à adopter. | React, Vite, Javascript, CSS |
+| Sprint | Exercice | Description | Technologies |
+|:---:|---|---|---|
+| 2 | [Refuge des Patounes](EXERCICES/Ex-Sprint2/my-app) | Page d'un refuge pour chats : barre de navigation, section de présentation et section « La Star du Jour » avec la photo et la description d'un chat à adopter. | React, Vite, JavaScript, CSS |
 
-Les dossiers des prochains TP et exercices seront ajoutés au fil du bootcamp.
+Les prochains TP, masterclass et exercices seront ajoutés au fil du bootcamp.
 
 ## Lancer un TP
 
