@@ -50,6 +50,8 @@ Les exercices sont rangés dans le dossier [EXERCICES](EXERCICES). Ce sont des m
 | 2 | [Premiers modules Node.js](EXERCICES/Ex-Sprint2/My-Project/Exercice1) | Premier projet Node.js : un module maison (`require` / `module.exports`) et l'utilisation du paquet npm **mathjs** pour faire des calculs dans le terminal. | Node.js, npm |
 | 2 | [React Router](EXERCICES/Ex-Sprint2/react-router-dom) | Navigation entre plusieurs pages (Accueil, À propos, Contact) avec une barre de navigation commune, une page 404, une redirection et une **route protégée** qui renvoie vers l'accueil si l'utilisateur n'est pas administrateur. | React, Vite, React Router |
 | 2 | [URLs dynamiques](EXERCICES/Ex-Sprint2/urls-dynamiques) | Mini-blog avec une **route dynamique** `/articles/:id` : l'identifiant est lu dans l'URL avec `useParams` pour afficher le bon article, avec un message si l'article n'existe pas. | React, Vite, React Router |
+| 2 | [Hooks — Titre de bienvenue](EXERCICES/Ex-Sprint2/hook/app1) | Composant `DynamicWelcome` dont le titre change 3 secondes après le montage, grâce à `useState`, `useEffect` et `setTimeout`, avec nettoyage du timer. | React, Vite |
+| 2 | [Hooks — Suivi de la souris](EXERCICES/Ex-Sprint2/hook/app2) | Composant `MouseTracker` qui affiche en direct les coordonnées de la souris, avec un écouteur `mousemove` ajouté dans `useEffect` et supprimé au démontage. | React, Vite |
 
 Les prochains TP, masterclass et exercices seront ajoutés au fil du bootcamp.
 
