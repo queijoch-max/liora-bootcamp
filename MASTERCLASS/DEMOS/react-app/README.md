@@ -1,16 +1,37 @@
-# React + Vite
+# Masterclass — Démo React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Sprint 2 · Frontend**
 
-Currently, two official plugins are available:
+Premier projet React créé avec **Vite**, réalisé pendant la masterclass.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Contenu
 
-## React Compiler
+Une page découpée en **composants** réutilisables :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Composant | Contenu |
+|---|---|
+| `Navbar` | Barre de navigation |
+| `Hello` | Affiche « Hello {name}, tu as {age} ans. » à partir de ses **props** |
+| `Footer` | Pied de page |
 
-## Expanding the Oxlint configuration
+Dans `App.jsx`, le composant `Hello` est utilisé trois fois avec des valeurs différentes :
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```jsx
+<Hello name="Raph" age="12" />
+<Hello name="Charlotte" age="13" />
+<Hello name="Gilles" age="14" />
+```
+
+## Notions travaillées
+
+- Création d'un projet avec Vite
+- Composants en fonctions fléchées
+- **Props** et déstructuration (`({ name, age })`)
+- Fragments `<> </>`
+
+## Lancer le projet
+
+```bash
+npm install      # la première fois seulement
+npm run dev
+```

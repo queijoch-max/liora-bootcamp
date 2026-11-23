@@ -1,19 +1,44 @@
-# React + Vite
+# TP1 React — Landing page en composants
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Sprint 2 · Frontend**
 
-Currently, two official plugins are available:
+Intégration d'une page d'accueil découpée en **composants** React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Composants
 
-## React Compiler
+| Composant | Contenu |
+|---|---|
+| `NavBar` | Logo et liens d'ancre (Accueil, Formulaire, Contact) |
+| `Accueil` | Section d'accueil avec un titre, un texte et un bouton d'inscription |
+| `Contact` | Formulaire de contact (nom, email, message) |
+| `Footer` | Pied de page |
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Les quatre composants sont assemblés dans `App.jsx`.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Notions travaillées
 
-## Expanding the Oxlint configuration
+- Création de composants et `export default` / `import`
+- Syntaxe **JSX** (`className`, `htmlFor`, balises auto-fermantes)
+- Import d'une image depuis `src/assets`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Structure
+
+```
+src/
+├── assets/logo.png
+├── components/
+│   ├── Accueil.jsx
+│   ├── Contact.jsx
+│   ├── Footer.jsx
+│   └── NavBar.jsx
+├── App.jsx
+├── index.css
+└── main.jsx
+```
+
+## Lancer le TP
+
+```bash
+npm install      # la première fois seulement
+npm run dev
+```

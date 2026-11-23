@@ -1,16 +1,26 @@
-# React + Vite
+# Exercice React — Refuge des Patounes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Sprint 2 · Frontend**
 
-Currently, two official plugins are available:
+Page d'un refuge pour chats, découpée en composants React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Composants
 
-## React Compiler
+| Composant | Contenu |
+|---|---|
+| `Navbar` | Barre de navigation (Home, About, Services, Contact) |
+| `Hero` | Présentation du refuge |
+| `Section` | « La Star du Jour » : photo et description de Caramel, un chat à adopter |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Notions travaillées
 
-## Expanding the ESLint configuration
+- Découpage d'une page en composants
+- Import d'une image depuis `src/assets`
+- Attribut `alt` pour l'accessibilité
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Lancer l'exercice
+
+```bash
+npm install      # la première fois seulement
+npm run dev
+```

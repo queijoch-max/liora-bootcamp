@@ -47,6 +47,9 @@ Les exercices sont rangés dans le dossier [EXERCICES](EXERCICES). Ce sont des m
 | Sprint | Exercice | Description | Technologies |
 |:---:|---|---|---|
 | 2 | [Refuge des Patounes](EXERCICES/Ex-Sprint2/my-app) | Page d'un refuge pour chats : barre de navigation, section de présentation et section « La Star du Jour » avec la photo et la description d'un chat à adopter. | React, Vite, JavaScript, CSS |
+| 2 | [Premiers modules Node.js](EXERCICES/Ex-Sprint2/My-Project/Exercice1) | Premier projet Node.js : un module maison (`require` / `module.exports`) et l'utilisation du paquet npm **mathjs** pour faire des calculs dans le terminal. | Node.js, npm |
+| 2 | [React Router](EXERCICES/Ex-Sprint2/react-router-dom) | Navigation entre plusieurs pages (Accueil, À propos, Contact) avec une barre de navigation commune, une page 404, une redirection et une **route protégée** qui renvoie vers l'accueil si l'utilisateur n'est pas administrateur. | React, Vite, React Router |
+| 2 | [URLs dynamiques](EXERCICES/Ex-Sprint2/urls-dynamiques) | Mini-blog avec une **route dynamique** `/articles/:id` : l'identifiant est lu dans l'URL avec `useParams` pour afficher le bon article, avec un message si l'article n'existe pas. | React, Vite, React Router |
 
 Les prochains TP, masterclass et exercices seront ajoutés au fil du bootcamp.
 
