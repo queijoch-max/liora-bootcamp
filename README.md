@@ -52,6 +52,9 @@ Les exercices sont rangés dans le dossier [EXERCICES](EXERCICES). Ce sont des m
 | 2 | [URLs dynamiques](EXERCICES/Ex-Sprint2/urls-dynamiques) | Mini-blog avec une **route dynamique** `/articles/:id` : l'identifiant est lu dans l'URL avec `useParams` pour afficher le bon article, avec un message si l'article n'existe pas. | React, Vite, React Router |
 | 2 | [Hooks — Titre de bienvenue](EXERCICES/Ex-Sprint2/hook/app1) | Composant `DynamicWelcome` dont le titre change 3 secondes après le montage, grâce à `useState`, `useEffect` et `setTimeout`, avec nettoyage du timer. | React, Vite |
 | 2 | [Hooks — Suivi de la souris](EXERCICES/Ex-Sprint2/hook/app2) | Composant `MouseTracker` qui affiche en direct les coordonnées de la souris, avec un écouteur `mousemove` ajouté dans `useEffect` et supprimé au démontage. | React, Vite |
+| 2 | [Découverte de Tailwind CSS](EXERCICES/Ex-Sprint2/my-tailwind-app) | Installation de Tailwind CSS v4 dans un projet Vite et premier en-tête stylé uniquement avec des classes utilitaires. | React, Vite, Tailwind CSS |
+| 2 | [Formulaire de contact Tailwind](EXERCICES/Ex-Sprint2/formulaire-tailwind-css) | Formulaire de contact (nom, email, message) centré et stylé avec Tailwind : champs avec bordure et coins arrondis, bouton avec effet au survol. | React, Vite, Tailwind CSS |
+| 2 | [Hooks personnalisés](EXERCICES/Ex-Sprint2/creation-hook) | Création des hooks `useFetch`, `useProductDetail` (un produit de Fake Store API) et `useWindowSize` (taille de la fenêtre, message différent sous 768 px). | React, Vite |
 
 Les prochains TP, masterclass et exercices seront ajoutés au fil du bootcamp.
 
