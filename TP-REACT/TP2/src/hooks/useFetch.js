@@ -37,7 +37,7 @@ function useFetch(url) {
         return () => {
             controller.abort();
         };
-    }, []);
+    }, [url]);
 
     return { data, loading, error };
 }
