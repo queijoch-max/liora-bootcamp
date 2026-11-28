@@ -56,6 +56,7 @@ Les exercices sont rangés dans le dossier [EXERCICES](EXERCICES). Ce sont des m
 | 2 | [Découverte de Tailwind CSS](EXERCICES/Ex-Sprint2/my-tailwind-app) | Installation de Tailwind CSS v4 dans un projet Vite et premier en-tête stylé uniquement avec des classes utilitaires. | React, Vite, Tailwind CSS |
 | 2 | [Formulaire de contact Tailwind](EXERCICES/Ex-Sprint2/formulaire-tailwind-css) | Formulaire de contact (nom, email, message) centré et stylé avec Tailwind : champs avec bordure et coins arrondis, bouton avec effet au survol. | React, Vite, Tailwind CSS |
 | 2 | [Hooks personnalisés](EXERCICES/Ex-Sprint2/creation-hook) | Création des hooks `useFetch`, `useProductDetail` (un produit de Fake Store API) et `useWindowSize` (taille de la fenêtre, message différent sous 768 px). | React, Vite |
+| 2 | [Optimiser ses hooks](EXERCICES/Ex-Sprint2/optimiser-hooks) | Six exercices pour éviter les re-renders inutiles : fonction stable avec `useCallback`, calcul et objet mémorisés avec `useMemo`, focus automatique et compteur de rendus avec `useRef`, et un hook `useStopwatch` (chronomètre). | React, Vite |
 
 Les prochains TP, masterclass et exercices seront ajoutés au fil du bootcamp.
 
